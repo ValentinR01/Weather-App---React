@@ -6,11 +6,12 @@ import {useEffect, useState} from "react";
 
 function App() {
   const [city, setCity] = useState({city: "paris"})
-
+  const [weather, setWeather] = useState({})
+  
   return (
     <> 
     <Form setCity={setCity} city={city}/>
-    <DataShow city={city}/>
+    <DataShow city={city} setWeather={setWeather} weather={weather}/>
     </>
   );
 }
